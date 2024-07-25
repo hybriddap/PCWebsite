@@ -8,8 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="index.css">
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <link rel="stylesheet" href="products.css">
     </head>
     <body style="text-align: center;">
         <div class = "header">
@@ -22,29 +21,17 @@
 
         <section id="email_container" style="text-align: center;">
             <div>
-                <h1>Sign Up to Us!</h1>
+                <h1>Budget Gaming PC</h1>
             </div>
             <div>
-                <h4>Enter Name:</h4>
-                <input id="user_name" type="text">
+                <img src="./Images/BudgetPC.jpg" alt="Budget Gaming PC" style="width:300px; height: 300px;">
             </div>
             <div>
-                <h4>Enter Email:</h4>
-                <input id="user_email" type="text">
+                <h4>$499</h4>
+                <button id="buy_budget">Buy</button>
+                <br><br>
             </div>
-
-            <!-- Captcha. -->
-            <form>
-                <br>
-                <div class="g-recaptcha" data-sitekey="6LdV2hcqAAAAADLISqeqfYpHky4XgwRGZIrxTl8R"></div>
-                <br/>
-                <input type="submit" value="Sign Up">
-                <br><br>    
-            </form>
         </section>
-
-        <script src="./JavaScript/main.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <!--<script src="https://smtpjs.com/v3/smtp.js"></script>-->
+        <script src="./JavaScript/products.js"></script>
     </body>
 </html>

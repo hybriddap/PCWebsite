@@ -67,7 +67,7 @@ function emailChecker(email)  //Written by dap
   return false;
 }
 
-document.getElementById("submit_form").onclick=function(){
+function onSubmission(){
   //Check for submission amount to stop bots
   if (submissions>=3) {
     window.alert("Too many submissions!");
@@ -105,9 +105,28 @@ document.getElementById("submit_form").onclick=function(){
     // );
 }
   
+const form=document.querySelector('form');
+form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const captchaResponse = grecaptcha.getResponse();
+  if (captchaResponse.length>0)
+  {
+    console.log("Check Passed!");
+    //onSubmission();
+  }
+  else
+  {
+    //console.log("Failed Check!");
+    window.alert("Please Fill out Captcha!")
+  }
+})
 
-document.getElementById('captcha').onclick = function(){
-  window.location.href="captcha.html";
+document.getElementById('contact_page').onclick = function(){
+  window.location.href="index.html";
+}
+
+document.getElementById('product_page').onclick = function(){
+  window.location.href="products.html";
 }
 
 // document.getElementById("MITF2").onclick=function(){

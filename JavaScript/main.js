@@ -77,6 +77,8 @@ document.getElementById("submit_form").onclick=function(){
   //Get Vars
   const user_name=document.getElementById("user_name").value;
   const user_email=document.getElementById("user_email").value;
+  document.getElementById("user_name").value="";
+  document.getElementById("user_email").value="";
 
   //Check for validility
   if(nameChecker(user_name)==false){
@@ -103,3 +105,11 @@ document.getElementById("submit_form").onclick=function(){
     // );
 }
   
+
+document.getElementById('captcha').onclick = function(){
+  window.location.href="captcha.html";
+}
+
+// document.getElementById("MITF2").onclick=function(){
+//   window.open("https://mrdap.itch.io/the-man-in-the-forest-lost-files");
+// }
